@@ -11,6 +11,5 @@ ADD tomcat-users.xml /usr/local/tomee/conf/tomcat-users.xml
 # This is the last step, so we can use Docker caching capabilities 
 # every time we recreate the container with a new version of the application
 
-ARG WAR_FILE=warfile
-ENV WAR_FILE ${WAR_FILE}
+ARG WAR_FILE=warfile.war
 ADD ${WAR_FILE} /usr/local/tomee/webapps/${WAR_FILE}
